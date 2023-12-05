@@ -1,16 +1,13 @@
-import { Suspense } from "react";
 import { Hydrate, Products } from "./components";
-import { getQueryClient } from "./utils";
-import { dehydrate } from "@tanstack/react-query";
+import { useHydrate } from "./hooks/useHydrate";
 import { fetchProducts } from "./services";
 
 export default async function Home() {
-  const queryClient = getQueryClient();
-  await queryClient.prefetchQuery({
+  const { prefetchData } = useHydrate({
     queryKey: ["hydrate-products"],
     queryFn: fetchProducts,
   });
-  const dehydratedState = dehydrate(queryClient);
+  const dehydratedState = await prefetchData();
 
   return (
     <main className="min-h-screen p-24">
