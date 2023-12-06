@@ -1,6 +1,5 @@
-import React from "react";
-import { BaseIconButton } from "../../Base";
 import { LikeFilledIcon, LikeIcon } from "@/app/_assets/ts";
+import { BaseIconButton } from "../../Base";
 import { useLike } from "../hooks";
 
 export const LikeButton = () => {
@@ -8,7 +7,7 @@ export const LikeButton = () => {
 
   return (
     <BaseIconButton onClick={onLikeClick}>
-      {liked ? <LikeIcon /> : <LikeFilledIcon />}
+      {liked ? <LikeFilledIcon /> : <LikeIcon />}
     </BaseIconButton>
   );
 };
