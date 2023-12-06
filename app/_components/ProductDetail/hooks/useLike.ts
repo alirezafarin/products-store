@@ -1,9 +1,10 @@
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { getLikeStatuses, setLikeStatus } from "../utils";
+import { IDefaultIdProps } from "../types";
 
-export const useLike = () => {
-  const { id } = useParams() as { id: string };
+export const useLike = ({ defaultId = "" }: IDefaultIdProps) => {
+  const { id = defaultId } = useParams<{ id: string }>();
   const [liked, setLiked] = useState(false);
 
   useEffect(() => {
