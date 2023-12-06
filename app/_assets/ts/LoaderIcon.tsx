@@ -1,4 +1,4 @@
-export const Loader = () => {
+export const LoaderIcon = () => {
   return (
     <svg
       aria-hidden="true"

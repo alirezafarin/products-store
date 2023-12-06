@@ -1,4 +1,4 @@
-export * from "./Loader";
+export * from "./LoaderIcon";
 export * from "./RightArrowIcon";
 export * from "./StarIcon";
 export * from "./LikeFilledIcon";
