@@ -5,10 +5,11 @@ import { useSuspenseQuery } from "@tanstack/react-query";
 import { BaseSwiper, BaseSwiperSlider } from "../Base";
 import "./assets/styles.css";
 import { ProductListItem } from "./components/ProductListItem";
+import { queryKeys } from "@/app/_constants";
 
 export const Products = () => {
   const { data } = useSuspenseQuery({
-    queryKey: ["hydrate-products"],
+    queryKey: [queryKeys.fetchProduct],
     queryFn: () => fetchProducts(),
   });
 

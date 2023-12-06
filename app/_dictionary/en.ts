@@ -3,4 +3,7 @@ export const en = {
   loadingDescription:
     "This may take a few seconds, please don't close this page.",
   seeProductDetails: "See Product Details",
+  price: "Price",
+  count: "Count",
+  category: "Category",
 };

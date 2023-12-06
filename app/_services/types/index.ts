@@ -10,7 +10,5 @@ export interface IProduct {
   image: string;
   price: number;
   rating: IRating;
-  count: number;
-  rate: number;
   title: string;
 }

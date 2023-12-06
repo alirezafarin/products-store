@@ -1,11 +1,12 @@
 import { Suspense } from "react";
-import { Hydrate, Products } from "../_components";
+import { Hydrate, LoadingComponent, Products } from "../_components";
 import { useHydrate } from "../_hooks/useHydrate";
 import { fetchProducts } from "../_services";
+import { queryKeys } from "../_constants";
 
 export default async function Home() {
   const { prefetchData } = useHydrate({
-    queryKey: ["hydrate-products"],
+    queryKey: [queryKeys.fetchProduct],
     queryFn: fetchProducts,
   });
   const dehydratedState = await prefetchData();
@@ -13,7 +14,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen p-2">
       <Hydrate state={dehydratedState}>
-        <Suspense fallback="...loading">
+        <Suspense fallback={<LoadingComponent />}>
           <Products />
         </Suspense>
       </Hydrate>
