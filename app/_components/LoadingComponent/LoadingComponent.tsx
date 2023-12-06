@@ -1,5 +1,5 @@
-import { Loader } from "@/app/assets/ts";
-import { en } from "@/app/dictionary/en";
+import { Loader } from "@/app/_assets/ts";
+import { en } from "@/app/_dictionary/en";
 
 export const LoadingComponent = () => {
   return (

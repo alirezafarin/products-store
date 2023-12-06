@@ -1,6 +1,6 @@
 "use client";
 
-import { fetchProducts } from "@/app/services";
+import { fetchProducts } from "@/app/_services";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { BaseSwiper, BaseSwiperSlider } from "../Base";
 import "./assets/styles.css";

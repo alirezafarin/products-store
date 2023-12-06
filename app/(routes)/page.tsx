@@ -1,7 +1,7 @@
 import { Suspense } from "react";
-import { Hydrate, Products } from "./components";
-import { useHydrate } from "./hooks/useHydrate";
-import { fetchProducts } from "./services";
+import { Hydrate, Products } from "../_components";
+import { useHydrate } from "../_hooks/useHydrate";
+import { fetchProducts } from "../_services";
 
 export default async function Home() {
   const { prefetchData } = useHydrate({

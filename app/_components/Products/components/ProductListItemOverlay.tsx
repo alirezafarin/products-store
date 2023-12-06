@@ -1,5 +1,5 @@
-import { RightArrowIcon } from "@/app/assets/ts";
-import { en } from "@/app/dictionary/en";
+import { RightArrowIcon } from "@/app/_assets/ts";
+import { en } from "@/app/_dictionary/en";
 import React from "react";
 
 export const ProductListItemOverlay = () => {

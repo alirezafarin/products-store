@@ -1,5 +1,5 @@
 import { dehydrate } from "@tanstack/react-query";
-import { getQueryClient } from "../utils";
+import { getQueryClient } from "../_utils";
 import { IUseHydrate } from "./types";
 
 export const useHydrate = ({ queryKey, queryFn }: IUseHydrate) => {
