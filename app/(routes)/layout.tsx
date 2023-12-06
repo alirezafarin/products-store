@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ReactNode } from "react";
 import "../_assets/styles/globals.css";
 import { Providers } from "../_providers";
 
@@ -10,11 +11,7 @@ export const metadata: Metadata = {
   description: "next13 code challenge",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>

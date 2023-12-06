@@ -6,4 +6,5 @@ export const en = {
   price: "Price",
   count: "Count",
   category: "Category",
+  reviews: "reviews",
 };
