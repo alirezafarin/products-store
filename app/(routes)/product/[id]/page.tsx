@@ -8,6 +8,8 @@ interface IProductPage {
   params: { id: string };
 }
 
+export const revalidate = 600;
+
 export default async function ProductPage({ params }: IProductPage) {
   const { prefetchData } = useHydrate({
     queryKey: [queryKeys.fetchProductDetails, params.id],

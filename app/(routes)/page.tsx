@@ -4,6 +4,8 @@ import { useHydrate } from "../_hooks/useHydrate";
 import { fetchProducts } from "../_services";
 import { queryKeys } from "../_constants";
 
+export const revalidate = 600;
+
 export default async function Home() {
   const { prefetchData } = useHydrate({
     queryKey: [queryKeys.fetchProduct],
