@@ -7,4 +7,6 @@ export const en = {
   count: "Count",
   category: "Category",
   reviews: "reviews",
+  errorMsg: "Something went wrong !",
+  tryAgain: "Try again",
 };
