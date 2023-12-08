@@ -1,5 +1,4 @@
 import { queryKeys } from "@/app/_constants";
-import { en } from "@/app/_dictionary/en";
 import { fetchProductDetails } from "@/app/_services";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";
@@ -13,10 +12,5 @@ export const useProductDetails = () => {
     queryFn: () => fetchProductDetails(id),
   });
 
-  const productDetailItems = [
-    { id: 0, title: en.price, value: `${price}$` },
-    { id: 1, title: en.category, value: category },
-  ];
-
-  return { image, title, description, productDetailItems, rating };
+  return { image, title, description, rating, category, price };
 };

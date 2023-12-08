@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import { BaseRatings } from "../Base";
-import { ProductDetailItem } from "./components";
+import { ProductDetailList, ProductDetailTitle } from "./components";
 import { LikeButton } from "./components/LikeButton";
 import { useProductDetails } from "./hooks";
 
 export const ProductDetail = () => {
-  const { description, image, productDetailItems, title, rating } =
+  const { description, image, category, price, title, rating } =
     useProductDetails();
 
   return (
@@ -22,19 +22,12 @@ export const ProductDetail = () => {
         />
       </div>
       <div className="sm:w-2/4 w-full">
-        <div>
-          <h1 className="font-bold !text-2xl mb-2">{title}</h1>
-          <span className="text-gray-600 text-sm">{description}</span>
-        </div>
+        <ProductDetailTitle title={title} description={description} />
         <div className="my-1 flex justify-between items-center">
           <BaseRatings rating={rating} />
           <LikeButton />
         </div>
-        <div className="mt-3">
-          {productDetailItems.map(({ id, title, value }) => (
-            <ProductDetailItem key={id} title={title} value={value} />
-          ))}
-        </div>
+        <ProductDetailList category={category} price={price} />
       </div>
     </div>
   );
